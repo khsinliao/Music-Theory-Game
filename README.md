@@ -1,4 +1,4 @@
-# Melody Master 🎵
+# UU Music 🎵
 
 An interactive educational web app to learn music theory, specifically the Treble Clef, through a drag-and-drop game.
 
@@ -10,27 +10,39 @@ An interactive educational web app to learn music theory, specifically the Trebl
 
 ## 🚀 How to Deploy to GitHub Pages
 
-This project uses a "No-Build" architecture (via Import Maps and CDN), which makes deployment extremely simple. You do not need `npm build` or a complex CI/CD pipeline.
+This project uses **Vite** to build an optimized production version of the app.
 
-### Step 1: Push to GitHub
-1. Create a new repository on GitHub.
-2. Push all the project files (`index.html`, `index.tsx`, `App.tsx`, etc.) to the `main` branch of your repository.
+### Prerequisites
+Make sure you have Node.js and npm installed.
 
-### Step 2: Enable GitHub Pages
+### Step 1: Install Dependencies
+Open your terminal in the project folder and run:
+```bash
+npm install
+```
+
+### Step 2: One-Click Deploy
+Run the following command:
+```bash
+npm run deploy
+```
+
+**What this command does:**
+1. Checks TypeScript for errors.
+2. Builds the project using Vite (generates a `dist` folder).
+3. Pushes the `dist` folder to the `gh-pages` branch on GitHub.
+
+### Step 3: Verify GitHub Settings
 1. Go to your repository on GitHub.
 2. Click on **Settings** (top tab).
 3. In the left sidebar, click on **Pages**.
 4. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
-5. Under **Branch**, select `main` and `/ (root)`.
-6. Click **Save**.
-
-### Step 3: Done!
-GitHub will process the files (usually takes 1-2 minutes). Refresh the Pages settings page to see your live URL (e.g., `https://your-username.github.io/melody-master/`).
+5. Ensure **Branch** is set to `gh-pages` and folder is `/ (root)`.
+6. Wait a minute or two, and your site will be live!
 
 ## Local Development
-To run this locally, you can use any static file server.
-If you have Python installed:
+To run the app locally with hot-reloading:
 ```bash
-python3 -m http.server 8000
+npm run dev
 ```
-Then open `http://localhost:8000` in your browser.
+Then open `http://localhost:5173` in your browser.
