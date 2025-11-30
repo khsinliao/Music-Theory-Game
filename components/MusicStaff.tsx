@@ -75,14 +75,15 @@ const MusicStaff: React.FC<MusicStaffProps> = ({ userNote, onPlaceNote, feedback
     let closestNote: NoteDefinition | null = null;
     let minDistance = Infinity;
 
-    ALL_NOTES.forEach(note => {
+    // Use for...of instead of forEach for better TS type inference
+    for (const note of ALL_NOTES) {
       const noteY = getYForNote(note.positionIndex);
       const dist = Math.abs(y - noteY);
       if (dist < minDistance) {
         minDistance = dist;
         closestNote = note;
       }
-    });
+    }
 
     if (closestNote) {
       onPlaceNote(closestNote);
