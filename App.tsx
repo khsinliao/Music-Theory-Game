@@ -71,7 +71,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="p-2 text-center text-slate-300 text-xs shrink-0">
-        Melody Master © {new Date().getFullYear()}
+        UU Music © {new Date().getFullYear()}
       </footer>
     </div>
   );

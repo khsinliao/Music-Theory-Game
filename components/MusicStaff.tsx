@@ -181,11 +181,11 @@ const MusicStaff: React.FC<MusicStaffProps> = ({ userNote, onPlaceNote, feedback
 
         {/* Treble Clef (G Clef) - Text based */}
         {/* Using Unicode Character '𝄞' (U+1D11E) */}
-        {/* Positioned to wrap around the G Line (Line 2, Y=140) */}
+        {/* Scaled up ~1.2x (130 -> 156), Y adjusted from 164 -> 170 to keep alignment */}
         <text 
-            x="40" 
-            y="160" 
-            fontSize="130" 
+            x="34" 
+            y="170" 
+            fontSize="156" 
             fontFamily="serif" 
             fill="#1e1b4b" 
             style={{ pointerEvents: 'none', userSelect: 'none' }}
