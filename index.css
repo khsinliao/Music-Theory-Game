@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 確保全螢幕高度在行動裝置上正確 */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  touch-action: manipulation; /* 優化觸控反應 */
+}
