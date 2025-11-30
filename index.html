@@ -5,60 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="UU Music: A fun interactive game to learn music theory, treble clef notes, and ear training.">
     <title>UU Music - Music Theory Game</title>
-    
-    <!-- Tailwind CSS CDN for immediate preview without build step -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              music: {
-                dark: '#1e1b4b',
-                primary: '#4f46e5',
-                accent: '#fbbf24',
-                staff: '#334155'
-              }
-            },
-            keyframes: {
-              pop: {
-                '0%, 100%': { transform: 'scale(1)' },
-                '50%': { transform: 'scale(1.2)' },
-              },
-              wiggle: {
-                '0%, 100%': { transform: 'rotate(-3deg)' },
-                '50%': { transform: 'rotate(3deg)' },
-              },
-              'fade-in': {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              }
-            },
-            animation: {
-              pop: 'pop 0.3s ease-in-out',
-              wiggle: 'wiggle 0.5s ease-in-out infinite',
-              'fade-in': 'fade-in 0.5s ease-out',
-            }
-          }
-        }
-      }
-    </script>
-
-    <script type="importmap">
-    {
-      "imports": {
-        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-        "vite": "https://aistudiocdn.com/vite@^7.2.4",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-      }
-    }
-    </script>
-  </head>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+</head>
   <body class="bg-slate-50 text-slate-900 select-none">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- 改用相對路徑 ./index.tsx，這對 GitHub Pages 子路徑部署至關重要 -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
